@@ -1,0 +1,44 @@
+@use 'base/mixings' as m;
+@use 'base/variables' as v;
+
+.header{
+    background-color: v.$verde;
+
+    h1 {
+        color: v.$blanco;
+        text-align: center;
+        margin: 0;
+    }
+
+    .contenido-festival {
+        @include m.table {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+     
+    }
+}
+
+.navegacion-principal {
+    padding: 2rem;
+    @include m.table {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    a{
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: v.$blanco;
+
+        @include m.table {
+            margin: 0;
+        }
+
+        &:hover {
+            color: v.$amarillo;
+        }
+    }
+}
