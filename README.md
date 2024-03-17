@@ -2,5 +2,6 @@
 
 # CREANDO SASS 
 ## Instalando SASS y GULP
-### 1.-instalar SASS 
-### `npm install sass`
+1. Incializando tu PACKJSON
+-`npm init`
+
