@@ -1,0 +1,27 @@
+@use 'base/mixings' as m;
+@use 'base/variables' as v;
+
+.sobre-festival {
+    padding: 5rem;
+    @include m.table {
+        @include m.grid(2, 5rem)
+    }
+
+    
+}
+
+.informacion-festival {
+    
+    h2 {
+        margin: 0;
+    }
+
+    .fecha {
+        background-color: v.$rosa;
+        padding: 1rem;
+    }
+
+    p {
+        margin-top: 4rem
+    };
+}

@@ -433,3 +433,27 @@ template {
   font-size: 2.4rem;
   margin: 0;
 }
+
+.sobre-festival {
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.informacion-festival h2 {
+  margin: 0;
+}
+.informacion-festival .fecha {
+  background-color: #f53756;
+  padding: 1rem;
+}
+.informacion-festival p {
+  margin-top: 4rem;
+}
