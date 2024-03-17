@@ -14,21 +14,22 @@
 `npm install sass --save-dev`
 
 > [!IMPORTANT] 
-Si se te borra la carpeta de node_modules, puedes volver a instalarla con   
+>Si se te borra la carpeta de node_modules, puedes volver a instalarla con   
 `npm install` o `npm i`
 
 3. Copilar SASS con NPM
-3.1 Crear una carpeta con el nombre "SRC"
-3.2 Crear dentro de la carpeta "SRC" otra carpeta con el nonmbre de "SCSS". Dentro de la carpeta SCSS crear un archivo con el nombre de "app.scss".
->[!NOTE] Para crear variables en SASS hay que poner el caracter "$nombre" seguido del nombre que vas a poner.
+- Crear una carpeta con el nombre "SRC"
+- Crear dentro de la carpeta "SRC" otra carpeta con el nonmbre de "SCSS". Dentro de la carpeta SCSS crear un archivo con el nombre de "app.scss".
+>[!NOTE] 
+>Para crear variables en SASS hay que poner el caracter "$nombre" seguido del nombre que vas a poner.
 
-  3.3 Copilar sass en PACKJSON
+  - Copilar sass en PACKJSON con --
     "scripts": {
     "sass": "sass --watch src/scss:build/css"
   },
 
-  Hacer correr el programa con `npm run sass`
-  Luego vincular la carpeta creada en html
-  `<link href="build/css/app.css">`
+  -  Hacer correr el programa con `npm run sass`
+  - Luego vincular la carpeta creada en html
+    `<link href="build/css/app.css">`
 
  
