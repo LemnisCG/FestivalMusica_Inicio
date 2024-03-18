@@ -46,6 +46,8 @@ h3 {
 
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -436,8 +438,6 @@ template {
 
 .sobre-festival {
   padding: 5rem;
-  align-items: center;
-  justify-content: center;
 }
 @media (min-width: 768px) {
   .sobre-festival {

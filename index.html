@@ -42,22 +42,28 @@
               
             </div>
             <video autoplay muted loop>
-                <source src="video/concierto.mp4">
+                <source src="video/concierto.mp4" alt="video/mp4">
+                <source src="video/concierto.ogg" alt="video/ogg">
+                <source src="video/concierto.webm" alt="video/webm">
+                
             </video>
         </div>
 
         <section class="contenedor sobre-festival">
             <div class="imagen">
-                <img src="img/imagen_vocalista.jpg" alt="">
-                <img src="src/img/imagen_vocalista.jpg" alt="">
-                <img src="img/imagen_vocalista.jpg" alt="">
+                <picture>
+                    <source srcset="build/css/imagen_vocalista.avif" alt="imagen_vocalista/avif">
+                    <source srcset="build/css/imagen_vocalista.webp" alt="imagen_vocalista/webp">
+                    
+                    <img height="300" width="200" src="build/css/imagen_vocalista.jpg" alt="imagen_vocalista/jpg">
+                </picture>
 
             </div>
 
             <div class="informacion-festival">
                 <h2>Rock & EDM Festival</h2>
                 <p class="fecha">Julio 2000, Guadalajara Mexico</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aperiam repellat maiores! Repellendus ratione odit sapiente consequuntur aliquam et, dicta blanditiis atque vitae, est, aspernatur ea sit pariatur dolorem explicabo!</p>
+                <p>Lorenpm ipsum dolor sit amet consectetur adipisicing elit. Quas aperiam repellat maiores! Repellendus ratione odit sapiente consequuntur aliquam et, dicta blanditiis atque vitae, est, aspernatur ea sit pariatur dolorem explicabo!</p>
             </div>
         </section>
     </body>
