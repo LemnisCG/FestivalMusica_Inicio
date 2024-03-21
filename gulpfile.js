@@ -18,6 +18,14 @@ function css(cb) {
     
     cb(); // 
 }
+
+//js
+function javascript(cb) {
+    src("src/js/**/*.js")
+        .pipe(dest("build/css"))
+
+    cb();
+}
 //imaganes
 function imagenes(cb) {
     const opciones = {
@@ -56,11 +64,13 @@ function versionAvif(cb) {
 //Añadiendo watch 
 function dev(cb) {
     watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', css);
 
     cb();
 }
 exports.css = css;
+exports.js = javascript
 exports.imagenes = imagenes
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes,versionWebp,versionAvif,dev);
+exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript);
