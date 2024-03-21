@@ -443,7 +443,7 @@ template {
   .sobre-festival {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    gap: 5rem;
   }
 }
 
@@ -475,7 +475,7 @@ template {
   margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 5rem;
+  gap: 5rem;
 }
 .escenarios-contenedores h4 {
   color: #000000;
@@ -528,4 +528,57 @@ template {
 }
 .bg-verde li:nth-child(odd) {
   background-color: #3b9691;
+}
+
+.galeria {
+  padding: 5rem;
+}
+.galeria h3 {
+  text-align: center;
+}
+
+.galeria-imagenes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 468px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.overlay picture {
+  display: block;
+  max-width: 80rem;
 }

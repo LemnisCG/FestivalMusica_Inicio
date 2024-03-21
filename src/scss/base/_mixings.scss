@@ -18,7 +18,7 @@
 @mixin grid ($columna, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columna,1fr);
-    column-gap: $espaciado;
+    gap: $espaciado;
 }
 
 @mixin resetear-lista{

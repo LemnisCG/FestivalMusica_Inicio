@@ -64,7 +64,7 @@ function versionAvif(cb) {
 //Añadiendo watch 
 function dev(cb) {
     watch('src/scss/**/*.scss', css);
-    watch('src/js/**/*.js', css);
+    watch('src/js/**/*.js', javascript);
 
     cb();
 }
@@ -73,4 +73,4 @@ exports.js = javascript
 exports.imagenes = imagenes
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes,versionWebp,versionAvif,javascript);
+exports.dev = parallel(imagenes,versionWebp,versionAvif,dev,javascript);
