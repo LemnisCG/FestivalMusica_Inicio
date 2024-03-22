@@ -9,20 +9,21 @@ function iniciarApp(){
 function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes');
 
-    for(i = 1; i <= 12; i++){
-        const picture = document.createElement('picture');
-        picture.innerHTML = `
-        <source srcset="build/css/thumb/${i}.avif" alt="imagen_vocalista/avif">
-        <source srcset="build/css/thumb/${i}.webp" alt="imagen_vocalista/webp">
-        
-        <img loading="lazy" height="300" width="200" src="build/css/thumb/${i}.jpg" alt="imagen_vocalista/jpg">
-        `
-        picture.onclick = function(){
-            mostrarImagen(i);
-        }
-
-        galeria.appendChild(picture)
-
+    for(let i = 1; i <= 12; i++){
+        (function(index) {
+            const picture = document.createElement('picture');
+            picture.innerHTML = `
+            <source srcset="build/css/thumb/${index}.avif" alt="imagen_vocalista/avif">
+            <source srcset="build/css/thumb/${index}.webp" alt="imagen_vocalista/webp">
+            
+            <img loading="lazy" height="300" width="200" src="build/css/thumb/${index}.jpg" alt="imagen_vocalista/jpg">
+            `;
+            picture.onclick = function(){
+                mostrarImagen(index);
+            };
+    
+            galeria.appendChild(picture);
+        })(i);
     }
 
 }
@@ -38,10 +39,28 @@ function mostrarImagen(id) {
 
     pictureContainer.appendChild(picture); // Agregar la imagen al contenedor
 
+    //Crear el Overlay en la imagen
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     overlay.appendChild(pictureContainer); // Agregar el contenedor con la imagen al overlay
 
+    //boton para cerrar el overlay
+
+    const cerrarOverlay = document.createElement('P');
+    cerrarOverlay.textContent = 'X';
+    cerrarOverlay.classList.add('btn-cerrar');
+    cerrarOverlay.onclick = function(){
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body')
+        overlay.remove();
+    }
+
+    overlay.appendChild(cerrarOverlay);
+
+
+    //añandiendo overlay a body
     const body = document.querySelector('body');
+    body.classList.add('fijar-body')
     body.appendChild(overlay); // Agregar el overlay al cuerpo del documento
+
 }
