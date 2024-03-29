@@ -43,7 +43,11 @@ function mostrarImagen(id) {
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     overlay.appendChild(pictureContainer); // Agregar el contenedor con la imagen al overlay
-
+    overlay.onclick = function() {
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body')
+        overlay.remove();
+    }
     //boton para cerrar el overlay
 
     const cerrarOverlay = document.createElement('P');
